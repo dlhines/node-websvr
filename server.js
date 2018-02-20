@@ -57,7 +57,14 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/contact', (req, res) => {
+	 res.render('default.hbs', {
+	 pageTitle: 'Contact Page',
+	 pageBody: 'some body text',
+  });
+});
+
 // Starts Engine and listens on assigned port
 app.listen(port, () => {
-  console.log('Server Up - ${port}');
+  console.log(`Server Up - ${port}`);
 });
